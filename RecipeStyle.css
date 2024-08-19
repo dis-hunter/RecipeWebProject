@@ -1,0 +1,232 @@
+/* General reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+}
+
+/* Ensure the html and body take up the full height */
+html, body {
+    height: 100%;
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 8px 40px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+/* Move the links to the right */
+nav ul {
+    margin-left: 750px;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #55fa55;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Main content area with background image */
+#Recipe_Form {
+    height: 100%;
+    background-image: url(RecipeFormImage2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form box styling */
+.Recipe_Form_Box {
+    width: 400px;
+    height: 600px;
+    padding: 50px 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 1s;
+    margin-left: 350px;
+    margin-bottom: 40px;
+}
+
+.Recipe_Form_Box p {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 3px;
+}
+
+.Recipe_Form_Box input[type="text"], 
+.Recipe_Form_Box input[type="file"], 
+.Recipe_Form_Box textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.Recipe_Form_Box input[type="text"], 
+.Recipe_Form_Box input[type="file"] {
+    border-bottom: 1px solid white;
+    height: 25px;
+}
+
+.Recipe_Form_Box textarea {
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 70px;
+}
+
+.Recipe_Form_Box input[type="submit"] {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    margin: 4px;
+    padding: 8px 70px;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.Recipe_Form_Box input[type="submit"]:hover {
+    background-color: #55fa55;
+    transform: translateY(-3px);
+}
+
+.Recipe_Form_Box select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    color: black; /* Override global white color */
+    margin-bottom: 20px;
+}
+
+.Recipe_Form_Box select option {
+    color: black; /* Ensure dropdown options are black */
+    background-color: white; /* Ensure background color is white */
+}
+
+.Recipe_Form_Box:hover {
+    width: 590px;
+    transform: translateX(-72px);
+    border: 1px solid #55fa55;
+    color: #55fa55;
+}
+
+img {
+    width: 50px;
+    margin-top: 20px;
+}
+
+#form_box {
+    width: 400px;
+    height: 350px;
+    padding: 50px 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 1s;
+    margin-left: 430px;
+    margin-top: 130px;
+}
+
+#form_box h1 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+#form_box input[type="text"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 4px;
+    height: 30px;
+}
+
+#form_box input[type="submit"] {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    padding: 8px 70px;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#form_box:hover {
+    width: 590px;
+    transform: translateX(-72px);
+    border: 1px solid #55fa55;
+    color: #55fa55;
+}
+
+#form_box input[type="submit"]:hover {
+    background-color: #55fa55;
+    transform: translateY(-3px);
+}
+
+.Category_body {
+    background-image: url(RecipeFormImage1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Specific styles for the user type dropdown */
+select#usertype {
+    color: black !important; /* Ensure text color is black */
+    background-color: white !important; /* Ensure background color is white */
+}
+
+select#usertype option {
+    color: black !important; /* Ensure option text color is black */
+    background-color: white !important; /* Ensure option background color is white */
+}

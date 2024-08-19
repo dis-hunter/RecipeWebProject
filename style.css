@@ -1,0 +1,418 @@
+/* Oringe Emmanuel Magunge
+161309*/
+
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    color: rgb(255, 255, 255);
+    background-color: #555A5F;
+    
+}
+#header{
+    width:100%;
+    height:100vh;
+   animation:changeBackground 30s infinite;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+@keyframes changeBackground {
+    0%{
+        background-image:url(backgroundImage1.jpg) ;
+
+    }
+    25%{
+        background-image:url(backgroundImage2.jpg) ;
+
+    }
+    50%{
+        background-image:url(backgroundImage5.jpg) ;
+
+    }
+    75%{
+        background-image:url(backgroundImage4.jpg) ;
+
+    }
+    100%{
+        background-image:url(backgroundImage1.jpg) ;
+
+    }
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display:inline-block;
+    margin:10px 20px;
+    
+}
+nav ul li a{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content:'';
+    width:0;
+    height:3px;
+    background: #55fa55;
+    position:absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+img{
+    width:100px;
+}
+.header-text{
+    margin-top:7%;
+    font-size: 30px;
+}
+
+
+.header-text h1{
+    margin-top: 2%;
+    font-size: 65px;
+}
+.header-text h1 span{
+    color: #55fa55;
+}
+.header-text button{
+    color: #55fa55;
+    background: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border:#55fa55 3px solid;
+    font-size: 20px;
+    margin-top: 2%;
+    transition:0.5s;
+}
+.header-text button:hover{
+    color: white;
+    background: #55fa55;
+
+   
+}
+.dropdown{
+    display: inline-block;
+    position:relative;
+}
+.dropdown-content{
+    display: none;
+    position:absolute;
+    color:black;
+    min-width:200px;
+    z-index:1;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2); 
+}
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover  .dropdown-content{
+    display: block;
+}
+.dropbtn{
+    padding:16px;
+    cursor:pointer;
+    margin:none;
+    font-size: 12px;
+    color:white;
+    background-color:#55fa55;
+
+}
+.dropbtn:hover .dropbtn{
+    background-color: #3e8e41;
+}
+.user-icon{
+    background-color: #4CAF50;
+            border-radius: 50%;
+            color: white;
+            padding: 10px;
+            margin-right: 8px;
+}
+/*----------------Benefit List-------------------*/
+#benefitList{
+    padding:30px 0;
+
+}
+.benefit-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+
+}
+.benefit-list div{
+    background: #022710;
+    padding:40px;
+    font-size:13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+
+}
+.benefit-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.benefit-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.benefit-list div a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.benefit-list div:hover{
+    background: #55fa55;
+    transform:translateY(-10px);
+
+}
+
+.sub-title{
+    font-size: 40px;
+}
+/*------------------what we do---------------*/
+#feature-list{
+    padding:50px 0;
+}
+.features{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:40px;
+    margin-top:50px;
+}
+.feature{
+   border-radius: 10px;
+   position: relative;
+   overflow: hidden;
+}
+.feature img{
+    width:100%;
+    height: 90%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width:100%;
+    height:0;
+    background: linear-gradient(rgba(0,0,0,0.6),#55fa55);
+    border-radius:10px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding:0 40px;
+    text-align: center;
+    font-size: 14px;
+   
+
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom:20px;
+    font-size: 40px;
+}
+.layer a{
+    margin-top:20px;
+    color:#55fa55;
+    text-decoration: none;
+    font-size:18px;
+    line-height:60px;
+    background:white;
+    width:60px;
+    height:60px;
+    border-radius: 50px;
+    text-align: center;
+
+}.feature:hover img{
+transform:scale(1.1);
+}
+.feature:hover .layer {
+    height:100%;
+}
+.partners{
+    
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:40px;
+    margin-top:50px;
+}
+/*-----------------Log in page---------------*/
+#LoginPage{
+    margin:0;
+    padding:0;
+    width:100%;
+    height: 100vh;
+    background-image: url(backgroundImage5.jpg);
+    background-size:cover;
+    background-position: center;
+    font-family:"Poppins",sans-serif
+}
+.loginBox{
+    width:320px;
+    height:420px;
+    background:#55fa55;
+    color:white;
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%, -50%);
+    box-sizing: border-box;
+    padding:70px 30px;
+    border-radius: 20px;
+}
+.LoginImage{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    position:absolute;
+    top:-50px;
+    left:calc(50% - 50px);
+
+}
+.LoginHere{
+    margin:0;
+    padding:0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.loginBox p{
+    margin:0;
+    padding:0;
+    font-weight:bold;
+}
+.loginBox input{
+    width:100%;
+    margin-bottom:20px;
+}
+.loginBox input[type="text"], input[type="password"]{
+    border:none;
+    border-bottom:1px solid white;
+    background: transparent;
+    outline:none;
+    height:40px;
+    color:white;
+    font-size: 16px;
+
+}
+.loginBox input[type="submit"]{
+    border:none;
+    outline:none;
+    height:40px;
+    background:#022710;
+    color:white;
+    font-size: 18px;
+    transition:0.5s;
+}
+.loginBox input[type="submit"]:hover{
+    cursor:pointer;
+    background: #82c482;
+    color:black;
+}
+.loginBox a{
+    text-decoration:none;
+    font-size:12px;
+    line-height:20px;
+    color:#555A5F;
+}
+.loginBox a:hover{
+    color:white;
+}
+/*-----------------SignUp page--------------------*/
+#SignUp{
+    Margin:0;
+    Padding:0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(SignUpBackground.jpg);
+    background-size: cover;
+    background-position:center ;
+    font-family: "Poppins", sans-serif;
+}
+.SignUpBox{
+    width:440px;
+    height:580px;
+    background:transparent;
+    color:white;
+    top:50%;
+    right:45%;
+    position:absolute;
+    transform:translate(-50%, -50%);
+    box-sizing: border-box;
+    padding:45px 30px;
+    border: 1px solid white;
+    margin-top: 20px;
+    border-radius: 20px;
+    
+}
+.SignUpBox p{
+    margin:0;
+    padding:0;
+    font-weight:bold;
+}
+.SignUpBox input{
+    width:100%;
+    margin-bottom:15px;
+}
+.SignUpBox input[type="text"], input[type="password"], input[type="email"]{
+    border:none;
+    border-bottom:1px solid white   ;
+    background: transparent;
+    outline:none;
+    height:40px;
+    color:white;
+    font-size: 16px;
+
+}
+.SignUpBox input[type="submit"]{
+    border: 1px solid white;
+    border-radius: 50px;
+    outline:none;
+    height:40px;
+    background:transparent;
+    color:white;
+    font-size: 18px;
+    transition:0.5s;
+}
+.SignUpBox input[type="submit"]:hover{
+    cursor:pointer;
+    background:#55fa55;
+    color:white;
+}
+.SignUpBox a{
+    text-decoration:none;
+    font-size:12px;
+    line-height:20px;
+    color:#555A5F;
+}
+.SignUpBox a:hover{
+    color:white;
+}
